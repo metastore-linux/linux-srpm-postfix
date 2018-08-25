@@ -1,0 +1,20 @@
+diff -ru postfix-2.11.3.orig/conf/post-install postfix-2.11.3/conf/post-install
+--- postfix-2.11.3.orig/conf/post-install	2014-01-05 11:00:32.000000000 +1300
++++ postfix-2.11.3/conf/post-install	2014-11-21 16:56:42.248007372 +1300
+@@ -491,6 +491,16 @@
+ 	    case $path in
+ 	    no|no/*) continue;;
+ 	    esac
++	# Munge paths for alternatives.
++	case $path in
++		/usr/bin/mailq) path=$path.postfix ;;
++		/usr/bin/newaliases) path=$path.postfix ;;
++		/usr/bin/rmail) path=$path.postfix ;;
++		/usr/sbin/sendmail) path=$path.postfix ;;
++		/usr/share/man/man1/mailq.1.gz) path=/usr/share/man/man1/mailq.postfix.1.gz ;;
++		/usr/share/man/man1/newaliases.1.gz) path=/usr/share/man/man1/newaliases.postfix.1.gz ;;
++		/usr/share/man/man5/aliases.5.gz) path=/usr/share/man/man5/aliases.postfix.5.gz ;;
++	esac
+ 	    # Pick up the flags.
+ 	    case $flags in *u*) upgrade_flag=1;; *) upgrade_flag=;; esac
+ 	    case $flags in *c*) create_flag=1;; *) create_flag=;; esac

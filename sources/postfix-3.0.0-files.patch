@@ -1,0 +1,52 @@
+--- a/conf/postfix-files	2014-06-26 08:06:00.000000000 +1200
++++ b/conf/postfix-files	2015-02-03 10:50:16.345299203 +1300
+@@ -83,7 +83,6 @@
+ $meta_directory/dynamicmaps.cf.d:d:root:-:755
+ $meta_directory/dynamicmaps.cf:f:root:-:644
+ $meta_directory/main.cf.proto:f:root:-:644
+-$meta_directory/makedefs.out:f:root:-:644
+ $meta_directory/master.cf.proto:f:root:-:644
+ $meta_directory/postfix-files.d:d:root:-:755
+ $meta_directory/postfix-files:f:root:-:644
+@@ -139,18 +138,13 @@
+ $sendmail_path:f:root:-:755
+ $newaliases_path:l:$sendmail_path
+ $mailq_path:l:$sendmail_path
+-$config_directory/LICENSE:f:root:-:644:1
+-$config_directory/TLS_LICENSE:f:root:-:644:1
+ $config_directory/access:f:root:-:644:p1
+-$config_directory/aliases:f:root:-:644:p1
+-$config_directory/bounce.cf.default:f:root:-:644:1
+ $config_directory/canonical:f:root:-:644:p1
+ $config_directory/cidr_table:f:root:-:644:o
+ $config_directory/generic:f:root:-:644:p1
+ $config_directory/generics:f:root:-:644:o
+ $config_directory/header_checks:f:root:-:644:p1
+ $config_directory/install.cf:f:root:-:644:o
+-$config_directory/main.cf.default:f:root:-:644:1
+ $config_directory/main.cf:f:root:-:644:p
+ $config_directory/master.cf:f:root:-:644:p
+ $config_directory/pcre_table:f:root:-:644:o
+@@ -163,8 +157,8 @@
+ $config_directory/postfix-script-sgid:f:root:-:755:o
+ $config_directory/postfix-script-nosgid:f:root:-:755:o
+ $config_directory/post-install:f:root:-:755:o
+-$manpage_directory/man1/mailq.1:f:root:-:644
+-$manpage_directory/man1/newaliases.1:f:root:-:644
++$manpage_directory/man1/mailq.postfix.1:f:root:-:644
++$manpage_directory/man1/newaliases.postfix.1:f:root:-:644
+ $manpage_directory/man1/postalias.1:f:root:-:644
+ $manpage_directory/man1/postcat.1:f:root:-:644
+ $manpage_directory/man1/postconf.1:f:root:-:644
+@@ -177,9 +171,9 @@
+ $manpage_directory/man1/postmulti.1:f:root:-:644
+ $manpage_directory/man1/postqueue.1:f:root:-:644
+ $manpage_directory/man1/postsuper.1:f:root:-:644
+-$manpage_directory/man1/sendmail.1:f:root:-:644
++$manpage_directory/man1/sendmail.postfix.1:f:root:-:644
+ $manpage_directory/man5/access.5:f:root:-:644
+-$manpage_directory/man5/aliases.5:f:root:-:644
++$manpage_directory/man5/aliases.postfix.5:f:root:-:644
+ $manpage_directory/man5/body_checks.5:f:root:-:644
+ $manpage_directory/man5/bounce.5:f:root:-:644
+ $manpage_directory/man5/canonical.5:f:root:-:644
